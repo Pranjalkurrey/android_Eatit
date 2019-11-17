@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout_outer"
+    tools:context=".PayGway">
+
+    <ScrollView
+        android:id="@+id/payment_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout_outer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout_outer"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/top_bar_payment_page"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="675dp"
+            android:src="@drawable/payment_lable_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/top_bar_payment_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/right_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar_payment_page"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toStartOf="@+id/top_bar_payment_page"
+            app:layout_constraintTop_toTopOf="@+id/top_bar_payment_page"
+            app:layout_constraintVertical_bias="0.333" />
+
+        <TextView
+            android:id="@+id/top_bar_payment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="PAYMENTS"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar_payment_page"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.207"
+            app:layout_constraintStart_toStartOf="@+id/top_bar_payment_page"
+            app:layout_constraintTop_toTopOf="@+id/top_bar_payment_page"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/top_bar_item_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            android:text="Item,To pay"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar_payment_page"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar_payment_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/top_bar_payment_title"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/wallet_label"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:src="@drawable/payment_label_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_bar_payment_page" />
+
+        <TextView
+            android:id="@+id/wallet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="WALLETS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/wallet_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toStartOf="@+id/wallet_label"
+            app:layout_constraintTop_toTopOf="@+id/wallet_label" />
+
+        <ImageButton
+            android:id="@+id/phonepe_wallet_label"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/payment_label_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/paytm_wallet_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_label" />
+
+        <ImageButton
+            android:id="@+id/paytm_wallet_label"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/payment_label_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/card_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonepe_wallet_label" />
+
+        <ImageView
+            android:id="@+id/phonepe_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/phone_pe_logo"
+            app:layout_constraintBottom_toTopOf="@+id/paytm_wallet_label"
+            app:layout_constraintEnd_toEndOf="@+id/phonepe_wallet_label"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@+id/phonepe_wallet_label"
+            app:layout_constraintTop_toTopOf="@+id/phonepe_wallet_label" />
+
+        <TextView
+            android:id="@+id/phonepe_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="PhonePe"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/paytm_wallet_label"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toEndOf="@+id/phonepe_logo"
+            app:layout_constraintTop_toTopOf="@+id/phonepe_wallet_label" />
+
+        <ImageView
+            android:id="@+id/paytm_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/paytm_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/paytm_wallet_label"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@+id/paytm_wallet_label"
+            app:layout_constraintTop_toTopOf="@+id/paytm_wallet_label" />
+
+        <TextView
+            android:id="@+id/paytm_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="PayTM"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/paytm_wallet_label"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toEndOf="@+id/paytm_logo"
+            app:layout_constraintTop_toTopOf="@+id/paytm_wallet_label" />
+
+        <ImageView
+            android:id="@+id/card_label"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:src="@drawable/payment_label_grey"
+            app:layout_constraintBottom_toTopOf="@+id/add_a_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paytm_wallet_label" />
+
+        <TextView
+            android:id="@+id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="CREDIT/DEBIT CARDS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/card_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@+id/card_label"
+            app:layout_constraintTop_toTopOf="@+id/card_label" />
+
+        <ImageButton
+            android:id="@+id/add_a_card"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@drawable/payment_label_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/UPI_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_label" />
+
+        <ImageView
+            android:id="@+id/add_card_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/add_card"
+            app:layout_constraintBottom_toBottomOf="@+id/add_a_card"
+            app:layout_constraintEnd_toEndOf="@+id/add_a_card"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@+id/add_a_card"
+            app:layout_constraintTop_toTopOf="@+id/add_a_card"
+            app:layout_constraintVertical_bias="0.33999997" />
+
+        <ImageView
+            android:id="@+id/UPI_label"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:src="@drawable/payment_label_grey"
+            app:layout_constraintBottom_toTopOf="@+id/Upi_options"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_a_card" />
+
+        <TextView
+            android:id="@+id/UPI_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="UPI"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/UPI_label"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toStartOf="@+id/UPI_label"
+            app:layout_constraintTop_toTopOf="@+id/UPI_label" />
+
+        <ImageView
+            android:id="@+id/Upi_options"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/payment_label_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/cash_options"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UPI_label" />
+
+        <ImageButton
+            android:id="@+id/google_pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/google_pay_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/Upi_options"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="@+id/Upi_options"
+            app:layout_constraintTop_toTopOf="@+id/Upi_options" />
+
+        <ImageButton
+            android:id="@+id/bhim_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bhim_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/Upi_options"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toEndOf="@+id/google_pay_btn"
+            app:layout_constraintTop_toTopOf="@+id/Upi_options"
+            app:layout_constraintVertical_bias="0.578" />
+
+        <ImageView
+            android:id="@+id/cash_options"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/payment_label_grey"
+            app:layout_constraintBottom_toTopOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Upi_options" />
+
+        <TextView
+            android:id="@+id/cash_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="PAY ON DELIVERY"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cash_options"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cash_options" />
+
+        <ImageButton
+            android:id="@+id/pay_on_delivery_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/payment_label_blue_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cash_options" />
+
+        <ImageView
+            android:id="@+id/rupee_pay_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/pay_rupee"
+            app:layout_constraintBottom_toBottomOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintTop_toTopOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintVertical_bias="0.578" />
+
+        <TextView
+            android:id="@+id/cash_on_delivery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Cash"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cash_on_delivery_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Please keep exact charge handy to help us serve you bettter"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintEnd_toEndOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/pay_on_delivery_btn"
+            app:layout_constraintVertical_bias="0.827" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="72dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+

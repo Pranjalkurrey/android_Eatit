@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/basic_pack_cardView_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/mess_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/basic_pack_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mess_sticker"
+                app:layout_constraintVertical_bias="0.278" />
+
+            <ImageView
+                android:id="@+id/mess_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_marginTop="124dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sticker"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mess_img"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/mess_img"
+
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/mess_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Anpurna"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/mess_sticker"
+                app:layout_constraintEnd_toEndOf="@+id/mess_sticker"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="@+id/mess_sticker"
+                app:layout_constraintTop_toTopOf="@+id/mess_sticker"
+                app:layout_constraintVertical_bias="0.142" />
+
+            <TextView
+                android:id="@+id/mess_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="standerd thali"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mess_name"
+                app:layout_constraintHorizontal_bias="0.275"
+                app:layout_constraintStart_toStartOf="@+id/mess_name"
+                app:layout_constraintTop_toBottomOf="@+id/mess_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/meal_price"
+                android:layout_width="49dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="252dp"
+                android:layout_marginLeft="252dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Rs 50"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mess_sticker"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/mess_name"
+                app:layout_constraintTop_toTopOf="@+id/mess_sticker"
+                app:layout_constraintVertical_bias="0.227" />
+
+            <TextView
+                android:id="@+id/meal_descr"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Short description"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/mess_sticker"
+                app:layout_constraintEnd_toEndOf="@+id/mess_sticker"
+                app:layout_constraintHorizontal_bias="0.561"
+                app:layout_constraintStart_toStartOf="@+id/mess_sticker"
+                app:layout_constraintTop_toTopOf="@+id/mess_sticker"
+                app:layout_constraintVertical_bias="0.719" />
+
+            <TextView
+                android:id="@+id/meal_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:drawableLeft="@drawable/star"
+                android:drawablePadding="2dp"
+                android:text="4.5"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/meal_price"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/meal_price"
+                app:layout_constraintTop_toBottomOf="@+id/meal_price"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <TextView
+                android:id="@+id/meal_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="veg/non veg"
+                android:textColor="#abcdff"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/meal_descr"
+                app:layout_constraintEnd_toStartOf="@+id/meal_price"
+                app:layout_constraintStart_toEndOf="@+id/mess_name"
+                app:layout_constraintTop_toTopOf="@+id/mess_sticker" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

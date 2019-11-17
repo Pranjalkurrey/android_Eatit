@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/register_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fruit_salad"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+    <ImageView
+        android:id="@+id/login_small_rectangle"
+        android:layout_width="340dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/login_small_rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/register_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/register_background"
+        app:layout_constraintVertical_bias="0.58000004" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="#16FA06"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/login_small_rectangle"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <AutoCompleteTextView
+        android:id="@+id/username"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/login_field_rectangle"
+        android:gravity="center"
+        android:hint="Username"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <ImageView
+        android:id="@+id/user_png"
+        android:layout_width="22dp"
+        android:layout_height="21dp"
+        android:src="@drawable/user"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toTopOf="@+id/username" />
+
+    <AutoCompleteTextView
+        android:id="@+id/password"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/login_field_rectangle"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/telephone"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/lock_png"
+        android:layout_width="21dp"
+        android:layout_height="22dp"
+        android:src="@drawable/lock"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password" />
+
+    <AutoCompleteTextView
+        android:id="@+id/telephone"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/login_field_rectangle"
+        android:gravity="center"
+        android:hint="Telephone"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:button="@drawable/radio_tc"
+        android:paddingLeft="2dp"
+        android:text="hh! I accept the  Terms and Conditions "
+        android:textColor="#f7f9f5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/register_btn_rectangle"
+        android:padding="12dp"
+        android:text="for hunger"
+        app:layout_constraintBottom_toTopOf="@+id/connect_via"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.514" />
+
+</android.support.constraint.ConstraintLayout>

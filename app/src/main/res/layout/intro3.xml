@@ -1,0 +1,57 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_gradient3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-28dp" />
+
+    <ImageView
+        android:id="@+id/card_img_3"
+        android:layout_width="336dp"
+        android:layout_height="370dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/card_img_3"
+        app:layout_constraintBottom_toBottomOf="@+id/background2"
+        app:layout_constraintEnd_toEndOf="@+id/background2"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="@+id/background2"
+        app:layout_constraintTop_toTopOf="@+id/background2"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <ImageView
+        android:id="@+id/wrtn_3"
+        android:layout_width="287dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wrtn_3"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="@+id/card_img_3"
+        app:layout_constraintStart_toStartOf="@+id/card_img_3"
+        app:layout_constraintTop_toTopOf="@+id/card_img_3" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="334dp"
+        android:layout_height="58dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/next_btn_3"
+        android:onClick="next_step_3"
+        app:layout_constraintBottom_toBottomOf="@+id/card_img_3"
+        app:layout_constraintEnd_toEndOf="@+id/card_img_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/card_img_3" />
+
+</android.support.constraint.ConstraintLayout>

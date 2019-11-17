@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/register_background"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fruit_salad"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <ImageView
+        android:id="@+id/login_small_rectangle"
+        android:layout_width="340dp"
+        android:layout_height="460dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/login_small_rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/register_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/register_background"
+        app:layout_constraintVertical_bias="0.58000004" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#16FA06"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/login_small_rectangle"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <AutoCompleteTextView
+        android:id="@+id/username"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/login_field_rectangle"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:hint="Telephone"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <AutoCompleteTextView
+        android:id="@+id/password"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/login_field_rectangle"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/take_me_there_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/take_me_there_btn"
+        app:layout_constraintBottom_toTopOf="@+id/connect_via"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <ImageView
+        android:id="@+id/connect_via"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:src="@drawable/connect_via"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle" />
+
+    <LinearLayout
+        android:id="@+id/connect_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/connect_via"
+        app:layout_constraintVertical_bias="0.3">
+
+        <Button
+            android:id="@+id/facebook_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/facebook_btn" />
+
+        <Button
+            android:id="@+id/google_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/google_btn" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/new_account"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/new_account"
+        android:onClick="register_open"
+        app:layout_constraintBottom_toBottomOf="@+id/login_small_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/login_small_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/login_small_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/connect_buttons" />
+
+</android.support.constraint.ConstraintLayout>

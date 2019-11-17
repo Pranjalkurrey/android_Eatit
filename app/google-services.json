@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1078694996608",
+    "firebase_url": "https://firetest-de661.firebaseio.com",
+    "project_id": "firetest-de661",
+    "storage_bucket": "firetest-de661.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078694996608:android:e28dfeaf88b70ab6",
+        "android_client_info": {
+          "package_name": "inn.startXway.eateat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078694996608-43mkb188tlb2023hapbbatjgm7ek21lk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "inn.startXway.eateat",
+            "certificate_hash": "5fa3993b4b46516ab8cae7cfbf8cd591b414c18c"
+          }
+        },
+        {
+          "client_id": "1078694996608-ep0dnk3843e2vh5hqb4ks7v513u43397.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4r_d0tZtkULjcRYANqfDE5kGCUv7LqU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078694996608-ep0dnk3843e2vh5hqb4ks7v513u43397.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
